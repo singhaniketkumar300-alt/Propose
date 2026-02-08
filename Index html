@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Propose Day 💝</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      max-width: 420px;
+    }
+    h1 { color: #ff4b6e; }
+    .name {
+      font-size: 22px;
+      color: #ff4b6e;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    p {
+      color: #444;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .heart {
+      font-size: 50px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 12px 22px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4b6e;
+      color: white;
+      cursor: pointer;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="card">
+  <h1>Happy Propose Day 💌</h1>
+  <div class="name">Dear Pineapple 🍍💝</div>
+
+  <p>
+    From random talks to endless smiles,<br>
+    you’ve become my favorite part of every day.
+  </p>
+
+  <div class="heart">❤️</div>
+
+  <p>
+    Pineapple, will you be mine,<br>
+    today, tomorrow, and always?
+  </p>
+
+  <button onclick="askYes()">YES 💖</button>
+</div>
+
+<script>
+  function askYes() {
+    document.getElementById("card").innerHTML = `
+      <h1>Just one step more 💖</h1>
+      <p>Type <b>yes</b> below 😌</p>
+      <input id="reply" placeholder="type yes here">
+      <br><br>
+      <button onclick="finalMsg()">Submit 💌</button>
+    `;
+  }
+
+  function finalMsg() {
+    const v = document.getElementById("reply").value.toLowerCase();
+    if (v === "yes") {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          background:linear-gradient(135deg,#ff758c,#ff7eb3);
+          font-family:'Segoe UI',sans-serif;
+          color:white;
+          text-align:center;">
+          <div>
+            <h1>💖</h1>
+            <p style="font-size:28px;">
+              Love you meri jaan 😘
+            </p>
+            <p style="margin-top:20px;font-size:18px;">
+              — Chiknaa 💌
+            </p>
+          </div>
+        </div>
+      `;
+    } else {
+      alert("Only YES is accepted 😌💖");
+    }
+  }
+</script>
+
+</body>
+</html>
